@@ -9,9 +9,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('finance', FinanceController::class);
-Route::get('/finance/create/{name}', [FinanceController::class, 'create'])->name('finance.create');
-Route::get('/finance/head/{name}', [FinanceController::class, 'head'])->name('finance.head');
+Route::resource('/', FinanceController::class);
+Route::get('/create/{name}', [FinanceController::class, 'create'])->name('finance.create');
+Route::get('/head/{name}', [FinanceController::class, 'head'])->name('finance.head');
 Route::resource('head', HeadController::class);
 
 Route::get('/dashboard', function () {
