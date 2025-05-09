@@ -26,6 +26,6 @@ class HeadController extends Controller
     {
         $head->delete();
 
-        return redirect()->back()->with('success', 'Head deleted successfully.');
+        return redirect()->route('finance.index')->with('success', 'Head deleted successfully.');
     }
 }
